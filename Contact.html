@@ -5,15 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fashionify Contact</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <style>
 :root {
     --main-dark: #333333;
     --main-blue: #006464;
     --bg-light: #edecc7;
-    --bg-section: #CCCCCC;
     --main-blue-light: #70c4c4;
 }
+
+/* Body & Background */
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -23,7 +23,7 @@ body {
 .contact-container {
     background-image: url('Images/unnamed-52.jpg');
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
     display: flex;
@@ -41,82 +41,93 @@ body {
     box-shadow: 0 8px 30px rgba(0,0,0,0.2);
     text-align: center;
 }
+
 /* Header */
-header {margin-bottom: 40px;}
-.logo {font-size: 3.5em; color: var(--main-blue); margin:0; font-weight:700; letter-spacing:4px;}
+header { margin-bottom: 40px; }
+.logo { font-size: 3.5em; color: var(--main-blue); margin:0; font-weight:700; letter-spacing:4px; }
 
 /* Sections */
-.sections-container {display:flex; flex-wrap:wrap; gap:40px; text-align:left;}
-.contact-info, .contact-form {flex:1 1 45%; min-width:300px;}
-.contact-info {padding-right:20px;}
-h2 {font-size:1.8em;color:var(--main-blue);margin-top:0;margin-bottom:25px;font-weight:700;border-bottom:2px solid var(--main-blue);padding-bottom:10px;text-align:center;}
-.info-text {display:flex; align-items:center;margin-bottom:20px;font-size:1em;color:#edecc7;}
-.info-text i {color: var(--main-blue-light); margin-right:15px; font-size:1.5em; width:30px;text-align:center;}
-.social-icons {margin-top:30px; text-align:center;}
-.social-icons a {color:#333;font-size:1.8em;margin:0 15px;transition:color 0.3s;}
-.social-icons a:hover {color: var(--main-blue-light);}
-.form-group {margin-bottom:20px;}
-.form-group label {display:block;margin-bottom:5px;font-weight:400;color:#555;font-size:0.9em;}
-.form-group input, .form-group textarea {width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-family:inherit; font-size:1em; transition:border-color 0.3s;}
-.form-group input:focus, .form-group textarea:focus {border:2px solid var(--main-blue); outline:none;}
-.submit-btn {width:100%; padding:12px; background-color: var(--main-blue); color:#edecc7; border:none; border-radius:4px; font-size:1.1em; cursor:pointer; transition:0.3s;}
-.submit-btn:hover {background-color:#edecc7;color:var(--main-blue);}
-.map-container {width:100%;height:300px;margin-bottom:15px;border:4px solid var(--main-blue-light);border-radius:8px;overflow:hidden;}
-.map-container iframe {display:block;}
-.map-caption {font-style:italic;color:#777;font-size:0.9em;}
-.Message-Box {position:fixed;left:35%;padding:15px 25px;border-radius:8px;z-index:100;max-width:90%;box-sizing:border-box;text-align:left;font-weight:500;transition:opacity 0.4s, transform 0.4s;}
-.Message-Box.show {transform: translateY(0);}
-.error-box {background-color:#cc0000;color:white;}
-.success-box {background-color:#008000;color:white;}
-#Close-Btn {background:none;border:none;color:inherit;font-size:1.2em;font-weight:bold;line-height:1;cursor:pointer;margin-left:15px;padding:0;float:right;transition:color 0.2s;}
-#Username_Error,#Email_Error,#Subject_Error,#Message_Error {color:red;font-size:0.85em;margin-top:5px;margin-bottom:10px;display:none;}
+.sections-container { display:flex; flex-wrap:wrap; gap:40px; text-align:left; }
+.contact-info, .contact-form { flex:1 1 45%; min-width:300px; }
+.contact-info { padding-right:20px; }
+h2 { font-size:1.8em; color: var(--main-blue); margin-top:0; margin-bottom:25px; font-weight:700; border-bottom:2px solid var(--main-blue); padding-bottom:10px; text-align:center; }
+.info-text { display:flex; align-items:center; margin-bottom:20px; font-size:1em; color:#edecc7; }
+.info-text i { color: var(--main-blue-light); margin-right:15px; font-size:1.5em; width:30px; text-align:center; }
+.social-icons { margin-top:30px; text-align:center; }
+.social-icons a { color:#333; font-size:1.8em; margin:0 15px; transition: color 0.3s; }
+.social-icons a:hover { color: var(--main-blue-light); }
+.form-group { margin-bottom:20px; }
+.form-group label { display:block; margin-bottom:5px; font-weight:400; color:#555; font-size:0.9em; }
+.form-group input, .form-group textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:4px; font-family:inherit; font-size:1em; transition:border-color 0.3s; }
+.form-group input:focus, .form-group textarea:focus { border:2px solid var(--main-blue); outline:none; }
+.submit-btn { width:100%; padding:12px; background-color: var(--main-blue); color:#edecc7; border:none; border-radius:4px; font-size:1.1em; cursor:pointer; transition:0.3s; }
+.submit-btn:hover { background-color:#edecc7; color:var(--main-blue); }
+
+/* Map */
+.map-container { width:100%; height:300px; margin-bottom:15px; border:4px solid var(--main-blue-light); border-radius:8px; overflow:hidden; }
+.map-container iframe { display:block; }
+.map-caption { font-style:italic; color:#777; font-size:0.9em; }
+
+/* Message Box */
+.Message-Box { position:fixed; left:35%; padding:15px 25px; border-radius:8px; z-index:100; max-width:90%; box-sizing:border-box; text-align:left; font-weight:500; transition:opacity 0.4s, transform 0.4s; display:none; }
+.Message-Box.show { display:block; transform: translateY(0); }
+.error-box { background-color:#cc0000; color:white; }
+.success-box { background-color:#008000; color:white; }
+#Close-Btn { background:none; border:none; color:inherit; font-size:1.2em; font-weight:bold; cursor:pointer; float:right; }
+#Username_Error,#Email_Error,#Subject_Error,#Message_Error { color:red; font-size:0.85em; margin-top:5px; margin-bottom:10px; display:none; }
 
 /* Navbar */
-.navbar {background-color: var(--bg-light); border-radius:0 0 12px 12px; position:relative; box-shadow:0 2px 6px rgba(0,0,0,0.1);}
-.nav-container {max-width:1280px;margin:0 auto;padding:0 1rem;height:64px; display:flex; justify-content:space-between; align-items:center;}
-.brand {font-size:1.5rem; font-weight:bold; color:var(--main-dark); text-decoration:none; letter-spacing:0.05em; display:flex; align-items:center;}
-.brand img {height:40px; width:auto; margin-right:8px;}
-.menu-icon {display:flex; align-items:center; cursor:pointer; padding:8px; border:none; background:transparent;}
-.nav-links {display:none; position:absolute; top:64px; left:0; right:0; background-color: var(--bg-light); padding:8px 12px;}
-.nav-links.is-open {display:block;}
-.nav-link, .dropdown-menu {display:block; color:var(--main-dark); font-weight:500; padding:10px 12px; margin-bottom:4px; text-decoration:none; border-radius:8px;}
-.nav-link:hover, .dropdown-menu:hover {background-color: var(--main-blue); color: var(--bg-light);}
-.cta-button {background-color: var(--main-blue); color: var(--bg-light); padding:10px 16px; border-radius:8px; text-decoration:none;}
-.cta-button:hover {background-color: var(--main-dark);}
-@media(min-width:768px){.menu-icon{display:none;}.nav-links{display:flex;position:static;padding:0;gap:2rem;}.cta-button{width:auto;}}
+.navbar { background-color: var(--bg-light); border-radius:0 0 12px 12px; position:relative; box-shadow:0 2px 6px rgba(0,0,0,0.1); }
+.nav-container { max-width:1280px; margin:0 auto; padding:0 1rem; height:64px; display:flex; justify-content:space-between; align-items:center; }
+.brand { font-size:1.5rem; font-weight:bold; color:var(--main-dark); text-decoration:none; display:flex; align-items:center; }
+.brand img { height:40px; width:auto; margin-right:8px; }
+.menu-icon { display:flex; flex-direction:column; cursor:pointer; padding:8px; border:none; background:transparent; gap:5px; }
+.menu-icon span { width:25px; height:3px; background:var(--main-dark); transition:0.3s; }
+.nav-links { display:none; position:absolute; top:64px; left:0; right:0; background-color: var(--bg-light); padding:10px; flex-direction:column; }
+.nav-links a { padding:10px; text-decoration:none; color:var(--main-dark); font-weight:500; border-radius:8px; }
+.nav-links a:hover { background-color: var(--main-blue); color: var(--bg-light); }
+.nav-links .dropdown-menu { cursor:pointer; }
+.dropdown-content { display:none; flex-direction:column; margin-left:15px; }
+.dropdown-menu.open .dropdown-content { display:flex; }
+.cta-button { background-color: var(--main-blue); color: var(--bg-light); padding:10px 16px; border-radius:8px; text-decoration:none; }
+.cta-button:hover { background-color: var(--main-dark); }
+@media(min-width:768px){ 
+    .menu-icon{display:none;} 
+    .nav-links{ display:flex; position:static; flex-direction:row; gap:2rem; padding:0; } 
+    .nav-links a { margin:0; }
+    .dropdown-content { position:absolute; background-color: var(--bg-light); border:1px solid #ccc; border-radius:8px; top:100%; left:0; display:none; }
+    .dropdown-menu:hover .dropdown-content { display:flex; flex-direction:column; min-width:200px; }
+}
 </style>
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar">
-<div class="nav-container">
-    <a href="#" class="brand">
-        <img src="Images/logo.png" alt="Logo">FASHIONIFY
-    </a>
-    <button id="mobile-menu-button" class="menu-icon" aria-expanded="false"></button>
+  <div class="nav-container">
+    <a href="#" class="brand"><img src="Images/logo.png" alt="Logo">FASHIONIFY</a>
+    <div class="menu-icon" id="mobile-menu-button"><span></span><span></span><span></span></div>
     <div class="nav-links" id="nav-links">
-        <a href="index.html" class="nav-link">Home</a>
-        <div class="nav-link dropdown-menu" id="brands-dropdown-toggle">
-            Brands <span class="dropdown-arrow">&#9662;</span>
-            <div class="dropdown-content">
-                <a href="Gul_Ahmed_shop.html" class="nested-link">Gul_Ahmed</a>
-                <a href="Lakmé_shop.html" class="nested-link">Lakmé</a>
-                <a href="khaadi_shop.html" class="nested-link">Khaadi</a>
-                <a href="Sana_Safinaz_shop.html" class="nested-link">Sana_Safinaz</a>
-            </div>
+      <a href="index.html">Home</a>
+      <div class="dropdown-menu" id="brands-dropdown-toggle">Brands
+        <div class="dropdown-content">
+          <a href="Gul_Ahmed_shop.html">Gul_Ahmed</a>
+          <a href="Lakmé_shop.html">Lakmé</a>
+          <a href="khaadi_shop.html">Khaadi</a>
+          <a href="Sana_Safinaz_shop.html">Sana_Safinaz</a>
         </div>
-        <a href="AboutUs.html" class="nav-link">About Us</a>
-        <a href="Contact.html" class="nav-link">Contact</a>
-        <a href="feedback.html" class="nav-link">Feedback</a>
+      </div>
+      <a href="AboutUs.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+      <a href="feedback.html">Feedback</a>
     </div>
-</div>
-<a href="Register.html" class="cta-button">Sign Up</a>
+    <a href="Register.html" class="cta-button">Sign Up</a>
+  </div>
 </nav>
 
 <!-- Message Box -->
 <div class="Message-Box" id="Message-Box">
-    <button id="Close-Btn" onclick="CloseMessage()"></button>
+    <button id="Close-Btn" onclick="CloseMessage()">&times;</button>
     <p><strong id="Message-Title"></strong></p>
     <p id="Message-text"></p>
 </div>
@@ -175,6 +186,23 @@ h2 {font-size:1.8em;color:var(--main-blue);margin-top:0;margin-bottom:25px;font-
 </div>
 
 <script>
+/* Mobile menu toggle */
+const mobileButton = document.getElementById('mobile-menu-button');
+const navLinks = document.getElementById('nav-links');
+mobileButton.addEventListener('click', ()=>{
+    navLinks.classList.toggle('is-open');
+});
+
+/* Dropdown toggle for mobile */
+document.querySelectorAll('.dropdown-menu').forEach(menu=>{
+    menu.addEventListener('click', e=>{
+        if(window.innerWidth < 768){
+            menu.classList.toggle('open');
+        }
+    });
+});
+
+/* Form validation */
 function Form_Check(){
 const Username=document.getElementById("name").value;
 const Email=document.getElementById("email").value;
@@ -186,10 +214,6 @@ document.getElementById("Subject_Error").style.display="none";
 document.getElementById("Message_Error").style.display="none";
 
 if(!Username && !Email && !Subject && !Message){
-document.getElementById("Username_Error").style.display="block";
-document.getElementById("Email_Error").style.display="block";
-document.getElementById("Subject_Error").style.display="block";
-document.getElementById("Message_Error").style.display="block";
 alert("Please fill all fields!");
 return;
 }
@@ -206,6 +230,5 @@ box.classList.remove("success-box","error-box","show");
 }
 </script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
