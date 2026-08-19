@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download App</title>
+</head>
+<body>
+  <!-- Added visible text inside the button so users can click it -->
+  <button onclick="Download()">Download Installer</button>
+
+  <script> 
+    function Download(){
+      // Corrected syntax: assign the value using '=' instead of using '()'
+      window.location.href = "./setup.exe";
+    }
+  </script>
+</body>
+</html>
